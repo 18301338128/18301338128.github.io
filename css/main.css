@@ -1129,12 +1129,7 @@ pre .javascript .function {
   margin: 0 auto;
   max-width: 120px;
   padding: 2px;
-}
-.site-author-image {
-  transition: transform 1s ease-out;
-}
-.site-author-image:hover {
-  transform: rotateZ(360deg);
+  border-radius: 50%;
 }
 .site-author-name {
   color: #222;
@@ -1162,7 +1157,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a445a3;
+  background: #ff502f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2737,14 +2732,14 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://18301338128.github.io/images/pic/background.png");
+  background: url("https://18301338128.github.io/images/background2.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
 }
 .main-inner {
   background: #fff;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .header-inner {
   opacity: 0.8;
