@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-05T07:24:13.224Z</updated>
+  <updated>2019-10-05T08:01:20.552Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>&#39;test&#39;</title>
+    <link href="http://yoursite.com/2019/10/05/test/"/>
+    <id>http://yoursite.com/2019/10/05/test/</id>
+    <published>2019-10-05T07:59:22.000Z</published>
+    <updated>2019-10-05T08:01:20.552Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/.com//avatar.jpg" alt="avatar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/.com//avatar.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>ubuntu 16.04.3安装uwsgi</title>
     <link href="http://yoursite.com/2019/10/04/error/"/>
     <id>http://yoursite.com/2019/10/04/error/</id>
     <published>2019-10-04T08:12:00.799Z</published>
-    <updated>2019-10-05T07:24:13.224Z</updated>
+    <updated>2019-10-05T07:28:35.822Z</updated>
     
-    <content type="html"><![CDATA[<!-- <img src="https://18301338128.github.io/images/background.png" width=100% /> --><a id="more"></a><h4 id="ubuntu-16-04-3安装uwsgi"><a href="#ubuntu-16-04-3安装uwsgi" class="headerlink" title="ubuntu 16.04.3安装uwsgi"></a>ubuntu 16.04.3安装uwsgi</h4><p><img src="/.com//570334.png" alt="570334"><br>==报错1 uwsgi ERROR: Command errored out with exit status 1==</p><p><a href="https://github.com/unbit/uwsgi/issues/1770" target="_blank" rel="noopener">原文地址</a></p><p>安装旧版本的编译器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get  install gcc-4.7</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -l /usr/bin/gcc</span><br><span class="line">lrwxrwxrwx 1 root root 14 Aug  9 09:58 /usr/bin/gcc -&gt; /usr/bin/gcc-5</span><br></pre></td></tr></table></figure><p>建立软链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /usr/bin/gcc</span><br><span class="line">sudo ln -s /usr/bin/gcc-4.7 /usr/bin/gcc</span><br></pre></td></tr></table></figure><p>安装uwsgi</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install uwsgi==2.0.15</span><br></pre></td></tr></table></figure><p>回到之前的版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /usr/bin/gcc</span><br><span class="line">sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc</span><br></pre></td></tr></table></figure><p>==报错2 uwsgi: error while loading shared libraries: libpcre.so.1: cannot open shared object file: No such file or directory==</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /root/anaconda3/bin/libpcre.so.1 /lib</span><br></pre></td></tr></table></figure><h4 id="安装conda"><a href="#安装conda" class="headerlink" title="安装conda"></a>安装conda</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh</span><br><span class="line">bash Anaconda3-5.2.0-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><p>==报错3 Microsoft Visual C++ 14.0 is required. –rcssmin、rjsmin、django-compressor==</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install rcssmin --install-option=&quot;--without-c-extensions&quot;</span><br><span class="line">pip install rjsmin --install-option=&quot;--without-c-extensions&quot;</span><br><span class="line">pip install django-compressor --upgrade</span><br></pre></td></tr></table></figure><p>查看历史版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pip install yolk3k</span><br><span class="line">$ yolk -V django</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<img src="https://18301338128.github.io/images/background.png" width="100%"><a id="more"></a><h4 id="ubuntu-16-04-3安装uwsgi"><a href="#ubuntu-16-04-3安装uwsgi" class="headerlink" title="ubuntu 16.04.3安装uwsgi"></a>ubuntu 16.04.3安装uwsgi</h4><p><img src="/.com//570334.png" alt="570334"><br>==报错1 uwsgi ERROR: Command errored out with exit status 1==</p><p><a href="https://github.com/unbit/uwsgi/issues/1770" target="_blank" rel="noopener">原文地址</a></p><p>安装旧版本的编译器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get  install gcc-4.7</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -l /usr/bin/gcc</span><br><span class="line">lrwxrwxrwx 1 root root 14 Aug  9 09:58 /usr/bin/gcc -&gt; /usr/bin/gcc-5</span><br></pre></td></tr></table></figure><p>建立软链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /usr/bin/gcc</span><br><span class="line">sudo ln -s /usr/bin/gcc-4.7 /usr/bin/gcc</span><br></pre></td></tr></table></figure><p>安装uwsgi</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install uwsgi==2.0.15</span><br></pre></td></tr></table></figure><p>回到之前的版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /usr/bin/gcc</span><br><span class="line">sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc</span><br></pre></td></tr></table></figure><p>==报错2 uwsgi: error while loading shared libraries: libpcre.so.1: cannot open shared object file: No such file or directory==</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /root/anaconda3/bin/libpcre.so.1 /lib</span><br></pre></td></tr></table></figure><h4 id="安装conda"><a href="#安装conda" class="headerlink" title="安装conda"></a>安装conda</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh</span><br><span class="line">bash Anaconda3-5.2.0-Linux-x86_64.sh</span><br></pre></td></tr></table></figure><p>==报错3 Microsoft Visual C++ 14.0 is required. –rcssmin、rjsmin、django-compressor==</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install rcssmin --install-option=&quot;--without-c-extensions&quot;</span><br><span class="line">pip install rjsmin --install-option=&quot;--without-c-extensions&quot;</span><br><span class="line">pip install django-compressor --upgrade</span><br></pre></td></tr></table></figure><p>查看历史版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pip install yolk3k</span><br><span class="line">$ yolk -V django</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;!-- &lt;img src=&quot;https://18301338128.github.io/images/background.png&quot; width=100% /&gt; --&gt;
+      &lt;img src=&quot;https://18301338128.github.io/images/background.png&quot; width=&quot;100%&quot;&gt;
     
     </summary>
     
