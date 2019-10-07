@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[《算法图解》笔记]]></title>
+    <url>%2F2019%2F10%2F07%2F%E3%80%8A%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3%E3%80%8B%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[快速排序12345678def quicksort(array): if len(array)&lt;2: return array else: pivot=array[0] less = [i for i in array[1:] if i &lt; array[0]] greater = [i for i in array[1:] if i &gt; array[0]] return quicksort(less) + [pivot] + quicksort(greater) 广度优先搜索寻找朋友圈的销售商12345678910111213141516171819202122from collections import dequegraph = &#123;&#125;graph[&apos;you&apos;] = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]...def search(name): search_queue = deque() search_queue += graph(name) searched = [] while search_queue: person = search_queue.popleft() if person not in searched: if person_is_seller(person): print person + &apos; is a mango seller&apos; return True else: search_queue += graph[person] searched.append(person) return Falsesearch(&apos;you&apos;) 狄克斯特拉算法from | to | value—|—|—start | a | 6start | b | 2a | fin | 1b | a | 3b | fin | 5 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859start a 6start b 2a fin 1b a 3b fin 5graph = &#123;&#125;graph[&apos;start&apos;] = &#123;&#125;graph[&apos;start&apos;][&apos;a&apos;] = 6graph[&apos;start&apos;][&apos;b&apos;] = 2graph[&apos;a&apos;] = &#123;&#125;graph[&apos;a&apos;][&apos;fin&apos;] = 1graph[&apos;b&apos;] = &#123;&#125;graph[&apos;b&apos;][&apos;a&apos;] = 3graph[&apos;b&apos;][&apos;fin&apos;] = 5graph[&apos;fin&apos;] = &#123;&#125;graph# &#123;&apos;start&apos;: &#123;&apos;a&apos;: 6, &apos;b&apos;: 2&#125;, &apos;a&apos;: &#123;&apos;fin&apos;: 1&#125;, &apos;b&apos;: &#123;&apos;a&apos;: 3, &apos;fin&apos;: 5&#125;, &apos;fin&apos;: &#123;&#125;&#125;infinity = float(&apos;inf&apos;)costs = &#123;&#125;costs[&apos;a&apos;] = 6costs[&apos;b&apos;] = 2costs[&apos;fin&apos;] = infinitycosts # &#123;&apos;a&apos;: 6, &apos;b&apos;: 2, &apos;fin&apos;: inf&#125;parents = &#123;&#125;parents[&apos;a&apos;] = &apos;start&apos;parents[&apos;b&apos;] = &apos;start&apos;parents[&apos;fin&apos;] = Noneparents # &#123;&apos;a&apos;: &apos;start&apos;, &apos;b&apos;: &apos;start&apos;, &apos;fin&apos;: None&#125;processed = [] def find_lowest_cost_node(costs): lowest_cost = float(&apos;inf&apos;) lowest_cost_node = None for node in costs: cost = costs[node] if cost &lt; lowest_cost and node not in processed: lowest_cost = cost lowest_cost_node = node return lowest_cost_nodenode = find_lowest_cost_node(costs)while node is not None: cost = costs[node] neighbors = graph[node] for n in neighbors.keys(): new_cost = cost + neighbors[n] print(node,n,cost,neighbors[n],new_cost,costs[n]) if costs[n] &gt; new_cost: costs[n] = new_cost parents[n] = node processed.append(node) node = find_lowest_cost_node(costs)processed # [&apos;b&apos;, &apos;a&apos;, &apos;fin&apos;] 动态规划背包问题 1cell[i][j] = max(cell[i-1][j], cell[i-1][j-当前商品的重量]) 最长公共子串 1234if word_a[i] == word_b[j]: cell[i][j] = cell[i-1][j-1] + 1else: cell[i][j] = 0 最长公共子序列 1234if word_a[i] == word_d[j]: cell[i][j] = cell[i-1][j-1] + 1else: cell[i][j] = max(cell[i-1][j], cell[i][j-1])]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ubuntu 16.04.3安装uwsgi]]></title>
     <url>%2F2019%2F10%2F04%2Ferror%2F</url>
-    <content type="text"><![CDATA[ubuntu 16.04.3安装uwsgi==报错1 uwsgi ERROR: Command errored out with exit status 1==原文地址安装旧版本的编译器1sudo apt-get install gcc-4.7 12ls -l /usr/bin/gcclrwxrwxrwx 1 root root 14 Aug 9 09:58 /usr/bin/gcc -&gt; /usr/bin/gcc-5 建立软链接 12sudo rm /usr/bin/gccsudo ln -s /usr/bin/gcc-4.7 /usr/bin/gcc 安装uwsgi 1pip install uwsgi==2.0.15 回到之前的版本 12sudo rm /usr/bin/gccsudo ln -s /usr/bin/gcc-5 /usr/bin/gcc ==报错2 uwsgi: error while loading shared libraries: libpcre.so.1: cannot open shared object file: No such file or directory== 1ln -s /root/anaconda3/bin/libpcre.so.1 /lib 安装conda12wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shbash Anaconda3-5.2.0-Linux-x86_64.sh ==报错3 Microsoft Visual C++ 14.0 is required. –rcssmin、rjsmin、django-compressor== 123pip install rcssmin --install-option=&quot;--without-c-extensions&quot;pip install rjsmin --install-option=&quot;--without-c-extensions&quot;pip install django-compressor --upgrade 查看历史版本 12$ pip install yolk3k$ yolk -V django]]></content>
+    <content type="text"><![CDATA[ubuntu 16.04.3安装uwsgi==报错1 uwsgi ERROR: Command errored out with exit status 1== 原文地址 安装旧版本的编译器 1sudo apt-get install gcc-4.7 12ls -l /usr/bin/gcclrwxrwxrwx 1 root root 14 Aug 9 09:58 /usr/bin/gcc -&gt; /usr/bin/gcc-5 建立软链接 12sudo rm /usr/bin/gccsudo ln -s /usr/bin/gcc-4.7 /usr/bin/gcc 安装uwsgi 1pip install uwsgi==2.0.15 回到之前的版本 12sudo rm /usr/bin/gccsudo ln -s /usr/bin/gcc-5 /usr/bin/gcc ==报错2 uwsgi: error while loading shared libraries: libpcre.so.1: cannot open shared object file: No such file or directory== 1ln -s /root/anaconda3/bin/libpcre.so.1 /lib 安装conda12wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shbash Anaconda3-5.2.0-Linux-x86_64.sh ==报错3 Microsoft Visual C++ 14.0 is required. –rcssmin、rjsmin、django-compressor== 123pip install rcssmin --install-option=&quot;--without-c-extensions&quot;pip install rjsmin --install-option=&quot;--without-c-extensions&quot;pip install django-compressor --upgrade 查看历史版本 12$ pip install yolk3k$ yolk -V django]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -11,10 +22,5 @@
         <tag>conda</tag>
         <tag>uwsgi</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F10%2F04%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
