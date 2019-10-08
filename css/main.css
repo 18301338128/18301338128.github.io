@@ -1157,7 +1157,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #055470;
+  background: #b4365e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2732,7 +2732,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://18301338128.github.io/images/pic/1.png");
+  background: url("http://ww1.sinaimg.cn/large/006gloIOly1g7qx59pxmxj319j0ppwkj.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
